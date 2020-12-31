@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
+
 
 public class BoatController :  PhysicsObject {
 
@@ -14,6 +16,8 @@ public class BoatController :  PhysicsObject {
     public GameObject SeaDown2;
     public GameObject SeaDown3;
     public GameObject Boat;
+    public Joystick joystick;
+    
      // public GameObject cat;
 
       //camerashake
@@ -44,8 +48,10 @@ public class BoatController :  PhysicsObject {
     {
         Vector2 move = Vector2.zero;
 
-        move.x = Input.GetAxis ("Horizontal");
+      if (joystick.Horizontal >=0 ){
+        move.x = joystick.Horizontal;
        //animator.SetFloat("speed",Mathf.Abs(move.x));
+       }
 
         if (Input.GetButtonDown ("Jump")) {
           //  animator.SetBool("isJumping",true);
@@ -61,7 +67,7 @@ public class BoatController :  PhysicsObject {
             }
         }
 
-       if (Input.GetKeyDown(KeyCode.UpArrow))
+       if (CrossPlatformInputManager.GetButtonDown ("Jumpp"))
        { if (SeaDown2.active)
         { SeaDown1.SetActive(true);
           Boat.transform.position = new Vector3(Boat.transform.position.x, -1.361779f, transform.position.z);
@@ -81,7 +87,7 @@ public class BoatController :  PhysicsObject {
 
            }
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (CrossPlatformInputManager.GetButtonDown ("Slide"))
         { if (SeaDown2.active)
         {SeaDown3.SetActive(true);
           Boat.transform.position = new Vector3(Boat.transform.position.x, -11.74188f, transform.position.z);

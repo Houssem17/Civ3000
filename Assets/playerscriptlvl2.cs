@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class playerscriptlvl2 : PhysicsObject {
 
@@ -12,6 +13,7 @@ public class playerscriptlvl2 : PhysicsObject {
     public GameObject menuContainer;
     public AudioClip audioClip;
     AudioSource audio;
+     public Joystick joystick;
 
      
 

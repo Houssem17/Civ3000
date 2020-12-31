@@ -61,6 +61,7 @@ ScriptedImporter:
     maxTextureSizeSet: 0
     compressionQualitySet: 0
     textureFormatSet: 0
+    applyGammaDecoding: 0
   spriteImportData:
   - name: persoproanim1_1
     originalName: 
@@ -17625,42 +17626,8 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
-  boneGOs:
-  - go: {fileID: -1144804523776737052, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 0
-  - go: {fileID: 3086884085113072102, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 1
-  - go: {fileID: 21765371179276572, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 2
-  - go: {fileID: 8174022681499075262, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 3
-  - go: {fileID: 2571118618960287494, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 4
-  - go: {fileID: 139264595374541124, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 5
-  - go: {fileID: 3575775365544920895, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 6
-  - go: {fileID: -2948664737829914951, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 7
-  - go: {fileID: -5363411225709631663, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 8
-  - go: {fileID: 4174362218348999226, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 9
-  - go: {fileID: -7074389773596043126, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 10
-  - go: {fileID: -8673541782953137408, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 11
-  - go: {fileID: -396083938838357410, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 12
-  - go: {fileID: 1866575294340404167, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 13
-  - go: {fileID: 741644391463556467, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 14
-  - go: {fileID: -5148763995285857153, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 15
-  - go: {fileID: -5382627385976439155, guid: e73ccc31aa58b104394e1c3b4b8bfc56, type: 3}
-    index: 16
   generateGOHierarchy: 0
   textureAssetName: persoproanim1 Texture
   prefabAssetName: persoproanim1 Prefab
   spriteLibAssetName: persoproanim1 Sprite Lib
+  secondarySpriteTextures: []

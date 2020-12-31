@@ -10,6 +10,8 @@ TagManager:
   - enemyb
   - Player1
   - hp
+  - Jump
+  - slide
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
-using UnityEngine.Experimental.U2D;
+
 using UnityEngine.U2D;
 
 #if UNITY_EDITOR

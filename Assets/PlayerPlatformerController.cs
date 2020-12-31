@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerPlatformerController : PhysicsObject {
 
@@ -16,6 +17,8 @@ public class PlayerPlatformerController : PhysicsObject {
       public AudioClip audioClip2;
     AudioSource audio;
     public Joystick joystick;
+    
+     
 
       //camerashake
       public float camShakeAmt = 0.1f;
@@ -31,6 +34,7 @@ public class PlayerPlatformerController : PhysicsObject {
        
         currentHealth = maxHealth;
         healthBars.setMaxHeart(maxHealth);
+        
 
     }
 
@@ -45,12 +49,12 @@ public class PlayerPlatformerController : PhysicsObject {
     protected override void ComputeVelocity()
     {
         Vector2 move = Vector2.zero;
-if (joystick.Horizontal >=0){
+if (joystick.Horizontal >=0 ){
         move.x = joystick.Horizontal;
        animator.SetFloat("speed",Mathf.Abs(move.x));
        }
 
-        if (Input.GetButtonDown ("Jump")) {
+        if (CrossPlatformInputManager.GetButtonDown ("Jumpp")) {
             animator.SetBool("isJumping",true);
             
             velocity.y = jumpTakeOffSpeed;
@@ -58,17 +62,17 @@ if (joystick.Horizontal >=0){
             
            
          
-        } else if (Input.GetButtonUp ("Jump")) 
+        } else if (CrossPlatformInputManager.GetButtonUp ("Jumpp")) 
         {animator.SetBool("isJumping",false);
             if (velocity.y > 0) {
                // animator.SetBool("isJumping",false);
-                velocity.y = velocity.y * 0.8f;
+                velocity.y = velocity.y * 1.5f;
                // AudioSource.PlayClipAtPoint(audioClip, transform.position);
                  
             }
         }
 
-       if (Input.GetButtonDown ("Vertical"))
+       if (CrossPlatformInputManager.GetButtonDown ("Slide"))
        {animator.SetBool ("isSliding",true);
         AudioSource.PlayClipAtPoint(audioClip2, transform.position);
         //move.x += 10f; 
@@ -77,7 +81,7 @@ if (joystick.Horizontal >=0){
 
 
        }
-        else if (Input.GetButtonUp ("Vertical")) 
+        else if (CrossPlatformInputManager.GetButtonUp ("Slide")) 
         {animator.SetBool("isSliding",false);}
         
         //animator.SetBool ("grounded", grounded);
